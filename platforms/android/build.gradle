@@ -92,7 +92,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "phonegap-plugin-push/helloworld-push.gradle"
+apply from: "phonegap-plugin-push/alex-push.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -258,8 +258,6 @@ dependencies {
     compile "com.android.support:support-v13:26.+"
     compile "me.leolin:ShortcutBadger:1.1.17@aar"
     compile "com.google.firebase:firebase-messaging:11.6.2"
-		compile "com.google.android.gms:play-services-gcm:10.0.0"
-compile "com.pushbots:pushbots-lib:3.0.3@aar"
     // SUB-PROJECT DEPENDENCIES END
 }
 
@@ -322,14 +320,3 @@ for (def func : cdvPluginPostBuildExtras) {
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
-manifestPlaceholders = [
-
-manifestApplicationId         : "${ applicationId }",
-
-pushbots_app_id               : "5a58f101a5d1036cd5293df7",
-
-pushbots_loglevel             : "DEBUG",
-
-google_sender_id              : "781401120248"
-
-]

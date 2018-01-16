@@ -3,8 +3,8 @@
 .slick-loading .slick-list
 {
     background: #fff url('./ajax-loader.gif') center center no-repeat;
-}
 
+}
 
 /* Icons */
 @font-face
@@ -202,4 +202,7 @@
 {
     opacity: .75;
     color: black;
+}
+.slick-list.draggable {
+	height: 300px;
 }

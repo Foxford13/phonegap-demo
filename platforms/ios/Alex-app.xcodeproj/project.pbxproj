@@ -40,6 +40,8 @@
 		D78F1A4BBF644784AA2584D9 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA22581135340AB8895A03C /* CDVLocation.m */; };
 		E3660D7A4E1C4742A2F9EC0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D078EE746131417DBABE9D18 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F039C174A39F49258CCFAA11 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F65DF461BD441399D05E682 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C347860BE130475693D2A9FC /* CDVNavigationWhitelistPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AE873B8C994230AB3C5AF4 /* CDVNavigationWhitelistPlugin.m */; };
+		0BABCA553392464D8BAE9B44 /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = E12E6F7140E04A2A9010C795 /* CDVFileTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,10 @@
 		F11D2A878BD8433D93BDCB36 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; };
 		F7B051E36DED4DE9B460D6E7 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Alex-app/config.xml"; sourceTree = "<group>"; };
+		15AE873B8C994230AB3C5AF4 /* CDVNavigationWhitelistPlugin.m */ = {isa = PBXFileReference; name = "CDVNavigationWhitelistPlugin.m"; path = "cordova-plugin-whitelist/CDVNavigationWhitelistPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F3AE9668552E4C19B3B16B32 /* CDVNavigationWhitelistPlugin.h */ = {isa = PBXFileReference; name = "CDVNavigationWhitelistPlugin.h"; path = "cordova-plugin-whitelist/CDVNavigationWhitelistPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E12E6F7140E04A2A9010C795 /* CDVFileTransfer.m */ = {isa = PBXFileReference; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		19C71CC23251427A955C68EF /* CDVFileTransfer.h */ = {isa = PBXFileReference; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +299,10 @@
 				89193865B2AC4358BFE7C505 /* PushPlugin.m */,
 				A6D7517406CF457697E560C0 /* AppDelegate+notification.h */,
 				844F4B9E3A8A4836A277BED1 /* PushPlugin.h */,
+				15AE873B8C994230AB3C5AF4 /* CDVNavigationWhitelistPlugin.m */,
+				F3AE9668552E4C19B3B16B32 /* CDVNavigationWhitelistPlugin.h */,
+				E12E6F7140E04A2A9010C795 /* CDVFileTransfer.m */,
+				19C71CC23251427A955C68EF /* CDVFileTransfer.h */,
 			);
 			name = Plugins;
 			path = "Alex-app/Plugins";
@@ -520,6 +530,8 @@
 				79057507F27A476FBF579E50 /* CDVVibration.m in Sources */,
 				BDD5974604DE49DE9E7B0177 /* AppDelegate+notification.m in Sources */,
 				75111CF839E64D05BC231AB1 /* PushPlugin.m in Sources */,
+				C347860BE130475693D2A9FC /* CDVNavigationWhitelistPlugin.m in Sources */,
+				0BABCA553392464D8BAE9B44 /* CDVFileTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

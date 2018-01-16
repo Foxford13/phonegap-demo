@@ -39,13 +39,19 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.recombix.alex"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.recombix.alex"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   }

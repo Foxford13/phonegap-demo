@@ -381,6 +381,28 @@ module.exports = [
     "clobbers": [
       "PushNotification"
     ]
+  },
+  {
+    "id": "cordova-plugin-whitelist.whitelist",
+    "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+    "pluginId": "cordova-plugin-whitelist",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransferError",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransferError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransfer",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransfer"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -398,7 +420,9 @@ module.exports.metadata =
   "cordova-plugin-media-capture": "1.4.3",
   "cordova-plugin-network-information": "1.3.4",
   "cordova-plugin-vibration": "2.1.6",
-  "phonegap-plugin-push": "2.1.2"
+  "phonegap-plugin-push": "2.1.2",
+  "cordova-plugin-whitelist": "1.1.0",
+  "cordova-plugin-file-transfer": "1.7.0"
 };
 // BOTTOM OF METADATA
 });

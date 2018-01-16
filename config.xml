@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.recombix.alex-app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.recombix.alex" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Alex-app</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -10,6 +10,7 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
     <platform name="android">
         <icon density="xhdpi" src="www/img/icon.jpg" />
         <icon density="xxhdpi" src="www/img/icon.jpg" />
@@ -92,7 +93,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="android" spec="~6.3.0" />
+    <engine name="android" spec="6.3.0" />
     <engine name="ios" spec="^4.5.4" />
     <plugin name="cordova-plugin-battery-status" spec="~1.2.4" />
     <plugin name="cordova-plugin-camera" spec="~2.4.1" />
@@ -108,4 +109,6 @@
     <plugin name="phonegap-plugin-push" spec="~1.8.0">
         <variable name="SENDER_ID" value="bf2e9cc914b6dd13465ac8d9d3a33025016f8686012e4eca8e3c5293cab715b7" />
     </plugin>
+    <plugin name="cordova-plugin-whitelist" spec="^1.1.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
 </widget>
