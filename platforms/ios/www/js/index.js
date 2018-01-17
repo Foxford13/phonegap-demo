@@ -44,6 +44,7 @@ var app = {
 		window.requestFileSystem(window.TEMPORARY, 5 * 1024 * 1024, function (fs) {
 
 			console.log('file system open: ' + fs.name);
+			console.log(fs.root);
 			getSampleFile(fs.root);
 
 		});
@@ -51,24 +52,37 @@ var app = {
 		function getSampleFile(dirEntry) {
 
 
-
+	$('#imageFile').append('getSample');
 
 			$('.moreComic').on('click', function () {
 
 
 				$('.slider1').empty();
+$('#imageFile').append('onClick');
 
-
-				$.ajax({
+$.ajax({
 					type       : "GET",
 					url        : "https://jsonplaceholder.typicode.com/photos",
 					dataType   : 'json',
 					success    : function(response) {
+						var imgUrl = response[i].url
+
+						var xhr = new XMLHttpRequest();
+						xhr.open('GET', '' + imgUrl + '', true);
+						console.log('here', xhr.response[0]);
+						xhr.responseType = 'blob';
+					console.log(xhr);
+						xhr.onload = function() {
+							if (this.status == 200) {
+
+								var blob = new Blob([this.response], { type: 'image/png' });
+
+								saveFile(dirEntry, blob, 'downloadedImage' + i + '.png');
+							}
+						};
+						xhr.send();
 
 
-						var blob = new Blob([response[i].url], { type: 'image/png' });
-
-						saveFile(dirEntry, blob, 'downloadedImage' + i + '.png');
 
 
 
@@ -85,20 +99,7 @@ var app = {
 				});
 
 
-      //
-			// 	var xhr = new XMLHttpRequest();
-			// 	xhr.open('GET', 'https://jsonplaceholder.typicode.com/photos', true);
-			// 	xhr.responseType = 'blob';
-			// console.log(xhr);
-			// 	xhr.onload = function() {
-			// 		if (this.status == 200) {
-      //
-			// 			var blob = new Blob([this.response], { type: 'image/png' });
-      //
-			// 			saveFile(dirEntry, blob, 'downloadedImage' + i + '.png');
-			// 		}
-			// 	};
-			// 	xhr.send();
+
 
 
 
@@ -109,7 +110,7 @@ var app = {
 		}
 
 		function saveFile(dirEntry, fileData, fileName) {
-
+	$('#imageFile').append('saveFile');
 			dirEntry.getFile(fileName, { create: true, exclusive: false }, function (fileEntry) {
 
 				writeFile(fileEntry, fileData);
@@ -123,6 +124,7 @@ var app = {
 			fileEntry.createWriter(function (fileWriter) {
 
 				fileWriter.onwriteend = function() {
+						$('#imageFile').append('writeFile');
 					console.log("Successful file write...");
 					if (dataObj.type == "image/png") {
 						readBinaryFile(fileEntry);
@@ -151,7 +153,7 @@ var app = {
 
 						displayImage(fileEntry.fullPath, this.result);
 
-
+	$('#imageFile').append('readBinary');
 					var blob = new Blob([new Uint8Array(this.result)], { type: "image/png" });
 					// displayImage(blob);
 				};
@@ -180,9 +182,9 @@ var app = {
 
 
       //
-			$('.slider1').html('<img src="cdvfile:///temporary' + fullPath + '" >');
+			$('.slider1').html('<img src="cdvfile:///temporary/downloadedImage' + i + '.png" >');
 			//
-
+			$('.slider1').append('displayImage');
 
 			// 	var elem = document.getElementById('imageFile');
 			// elem.src = blob.toURL();
@@ -308,11 +310,11 @@ var app = {
 			});
 
 
-			let i = 0;
-			$('.moreComic').on('click', function () {
-
-
-				$('.slider1').empty();
+			// let i = 0;
+			// $('.moreComic').on('click', function () {
+      //
+      //
+			// 	$('.slider1').empty();
 
 				// $.ajax({
 				// 	type       : "GET",
@@ -338,7 +340,7 @@ var app = {
 				// });
 
 
-			});
+			// });
 
 
 			$('.lessComic').on('click', function () {
